@@ -1,5 +1,5 @@
 # cf-palace
-added a dev branch
+Contributors: Heather Bisgaard, Taylor White, Phil Murphy
 
 
 The Code Fellows Palace
@@ -14,3 +14,5 @@ The Code Fellows Palace
 
 ## Minimum Viable Product (MVP) definition.
 What is the minimum required for you to present on your demo day? To get three randomized fields that will either subtract or add to your score. Leaderboard will persist data from previous attempts.
+
+Trello Board for Coordination: https://trello.com/b/yxDFr4aX/kanban-board

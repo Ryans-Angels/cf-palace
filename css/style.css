@@ -1,0 +1,33 @@
+header h1 {
+  border: 2px solid silver;
+  background-color: rgb(180, 153, 0);
+  color: white;
+  font-family: 'Caesar Dressing', cursive;
+  font-size: 4em; 
+  text-align: center;
+}
+main {
+  border: 1px solid green;
+  display: block;
+}
+header nav {
+  border: 3px solid red;
+  text-align: center;
+}
+#aboutUsCards td{
+  border: 2px solid black;
+  height: 450px;
+  width: 300px; 
+  padding: 5px; 
+  /* display: inline; */
+}
+#statue-left {
+  width: max-content;
+  float: left;
+  /* display: inline; */
+}
+#statue-right {
+  width: max-content;
+  float: right;
+  /* display: inline; */
+}

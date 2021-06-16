@@ -27,6 +27,7 @@ new ReelImages('jeff');
 new ReelImages('Joe', 'jpeg');
 new ReelImages('john', 'png');
 new ReelImages('Ryan');
+new ReelImages('lucky-goat');
 
 // Selects random Image number
 function selectRandomImage() {

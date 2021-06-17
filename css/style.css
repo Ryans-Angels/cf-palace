@@ -6,14 +6,29 @@ header h1 {
   font-size: 4em; 
   text-align: center;
 }
+
 main {
   border: 1px solid green;
-  display: block;
+  /* display: block; */
 }
+
 header nav {
   border: 3px solid red;
   text-align: center;
+  width: 50%;
+  margin: auto;
 }
+
+nav ul {
+  width: 100%;
+}
+
+nav li {
+  display: inline-block;
+  border: 1px solid blue;
+  width: max-content;
+}
+
 #aboutUsCards td{
   border: 2px solid black;
   height: 450px;
@@ -21,11 +36,13 @@ header nav {
   padding: 5px; 
   /* display: inline; */
 }
+
 #statue-left {
   width: max-content;
   float: left;
   /* display: inline; */
 }
+
 #statue-right {
   width: max-content;
   float: right;

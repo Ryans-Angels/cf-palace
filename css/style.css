@@ -1,0 +1,59 @@
+header h1 {
+  border: 2px solid silver;
+  background-color: rgb(180, 153, 0);
+  color: white;
+  font-family: 'Caesar Dressing', cursive;
+  font-size: 4em; 
+  text-align: center;
+}
+
+main {
+  border: 10px solid green;
+  /* display: block; */
+  margin-top: 25px;
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+header nav {
+  border: 3px solid red;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+nav ul {
+  width: 100%;
+}
+
+nav li {
+  display: inline-block;
+  border: 1px solid blue;
+  width: max-content;
+}
+
+#aboutUsCards td{
+  border: 2px solid black;
+  height: 450px;
+  width: 300px; 
+  padding: 5px; 
+}
+
+#firstReel, #secondReel, #thirdReel  {
+  border: 1px solid red;
+  width: 350px;
+  height: 350px;
+}
+
+#slot-machine {
+  display: flex;
+  width: max-content;
+  border: 5px solid orange;
+  padding: 20px;
+}

@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
-    <title>Code Fellows Palace</title>
-  </head>
-  <body>
-    <header>
-      <!-- <div class="music-bar"><audio controls>
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
+  <title>Code Fellows Palace</title>
+</head>
+
+<body>
+  <header>
+    <!-- <div class="music-bar"><audio controls>
         <source src="horse.ogg" type="audio/ogg">
         <source src="horse.mp3" type="audio/mpeg">
        Your browser does not support the audio tag.
       </audio></div> -->
-      <h1>Code Fellows Palace</h1>
-      <nav>
-        <ul>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="high-rollers.html">High Rollers</a></li>
-        </ul>
-      </nav>
-    </header>
-    <section id="statue-left"><img src="img/Ryanstatue.jpg"></section>
-    <section>
+    <h1>Code Fellows Palace</h1>
+    <nav>
       <ul>
-        <li><img id="firstReel"></li>
-        <li><img id="secondReel"></li>
-        <li><img id="thirdReel"></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="high-rollers.html">High Rollers</a></li>
       </ul>
-    </section>
-    <section id="statue-right"><img src="img/Ryanstatue.jpg"></section>
-    <!-- <footer>Footer Stuff Here</footer> -->
-    <script src="js/app.js"></script>
-  </body>
-</html>
+    </nav>
+  </header>
+  <main>
+    <div id="container">
+      <section class="statue"><img src="img/Ryanstatue.jpg"></section>
+      <section id="slot-machine">
+        <img id="firstReel">
+        <img id="secondReel">
+        <img id="thirdReel">
+      </section>
+      <section class="statue"><img src="img/Ryanstatue.jpg"></section>
+    </div>
+  </main>
 
+  <!-- <footer>Footer Stuff Here</footer> -->
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

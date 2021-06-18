@@ -19,7 +19,9 @@ main {
   align-items: center;
   width: 100%;
 }
-
+#spinButton {
+  border: 3px solid purple;
+}
 header nav {
   border: 3px solid red;
   text-align: center;

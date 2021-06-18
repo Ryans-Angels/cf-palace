@@ -63,3 +63,8 @@ nav li {
 #credits {
   border: 2px solid green;
 }
+
+.modal {
+  position: absolute;
+  z-index: 1000;
+}

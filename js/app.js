@@ -37,38 +37,41 @@ function selectRandomImage() {
 
 // renders 3 images
 function renderRandomImage() {
-  console.log(allReels.length);
+  // console.log(allReels.length);
   while (allReels.length < 3) {
     let selectedImage = selectRandomImage();
     allReels.push(selectedImage);
   }
+  firstReel.src = ReelImagesArray[allReels[0]].src;
+  secondReel.src = ReelImagesArray[allReels[1]].src;
+  thirdReel.src = ReelImagesArray[allReels[2]].src;
 }
-renderRandomImage();
-console.log(allReels);
+// renderRandomImage();
+// console.log(allReels);
 // firstReel.alt = ReelImagesArray[firstReel].name;
-firstReel.src = ReelImagesArray[allReels[0]].src;
-secondReel.src = ReelImagesArray[allReels[1]].src;
-thirdReel.src = ReelImagesArray[allReels[2]].src;
 
 
 
-// function handleSpinClick(event) {
-//   let spinClicked = event.target.alt;
-//   renderRandomImage();
-//   spinsRemaining--;
+function handleSpinClick(event) {
+  allReels = [];
+  let spinClicked = event.target.alt;
+  spinsRemaining --;
+  renderRandomImage();
+  if (spinsRemaining === 0) {
+    spinButton.removeEventListener('click', handleSpinClick);
+  }
+  console.log(spinsRemaining);
+  console.log(allReels);
+}
 
-//   if (spinsRemaining === 0) {
-//     spinButton.removeEventListener('click', handleSpinClick);
-//   }
-// }
+function handleBetClick(event) {
+  let betClicked = event.target.alt;
+  coins--;
+  console.log(coins);
 
-// function handleBetClick(event) {
-//   let betClicked = event.target.alt;
-//   coins--;
-
-//   if (gameOver === coins) {
-//     betButton.removeEventListener('click', handleBetClick);
-//   }
-// }
-// spinButton.addEventListener('click', handleSpinClick);
-// betButton.addEventListener('click', handleBetClick);
+  if (gameOver === coins) {
+    betButton.removeEventListener('click', handleBetClick);
+  }
+}
+spinButton.addEventListener('click', handleSpinClick);
+betButton.addEventListener('click', handleBetClick);

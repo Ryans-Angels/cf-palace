@@ -1,8 +1,17 @@
 # cf-palace
 
-Contributors: Heather Bisgaard, Taylor White, Phil Murphy
-
 The Code Fellows Palace
+
+## Authors
+
+* Heather Bisgaard, Software Engineer
+* Taylor White, Software Engineer
+* Phil Murphy, Site Reliability Engineer
+
+## Contributors
+
+* Ryan Gallaway, Instructor
+* Michael Eclave, TA
 
 ## Summary of idea
 

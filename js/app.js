@@ -1,15 +1,15 @@
 'use strict';
 
-let spinsRemaining = 3;
-let coins = 10;
+let spinsRemaining = 4;
+let coins = 12;
 let gameOver = 0;
+let userBet = 3;
 let firstReel = document.getElementById('firstReel');
 let secondReel = document.getElementById('secondReel');
 let thirdReel = document.getElementById('thirdReel');
 let spinButton = document.getElementById('spinButton');
 let betButton = document.getElementById('betButton');
 let ReelImagesArray = [];
-// let renderQ = [];
 let allReels = [];
 
 // Constructor for 
@@ -37,38 +37,59 @@ function selectRandomImage() {
 
 // renders 3 images
 function renderRandomImage() {
-  console.log(allReels.length);
+  // console.log(allReels.length);
   while (allReels.length < 3) {
     let selectedImage = selectRandomImage();
     allReels.push(selectedImage);
   }
+  firstReel.src = ReelImagesArray[allReels[0]].src;
+  secondReel.src = ReelImagesArray[allReels[1]].src;
+  thirdReel.src = ReelImagesArray[allReels[2]].src;
 }
-renderRandomImage();
-console.log(allReels);
-// firstReel.alt = ReelImagesArray[firstReel].name;
-firstReel.src = ReelImagesArray[allReels[0]].src;
-secondReel.src = ReelImagesArray[allReels[1]].src;
-thirdReel.src = ReelImagesArray[allReels[2]].src;
 
+function creditAmount() {
+  let credits = document.getElementById('credits');
+  credits.textContent = coins;
+}
 
+function winnerWinner() {
+  if(allReels[0] === allReels[1] &&
+    allReels[0] === allReels[2]) {
+    coins += userBet * 3;
+  }
+  else if (allReels[0] === allReels[1] ||
+    allReels[0] === allReels[2] ||
+    allReels[1] === allReels[2]) {
+    coins += userBet * 2;
+  }
+  creditAmount();
+}
 
-// function handleSpinClick(event) {
-//   let spinClicked = event.target.alt;
-//   renderRandomImage();
-//   spinsRemaining--;
+function handleSpinClick(event) {
+  allReels = [];
+  let spinClicked = event.target.alt;
+  spinsRemaining--;
+  renderRandomImage();
+  winnerWinner();
+  if (spinsRemaining === 0) {
+    spinButton.removeEventListener('click', handleSpinClick);
+  }
+  console.log(spinsRemaining);
+  console.log(allReels);
+}
 
-//   if (spinsRemaining === 0) {
-//     spinButton.removeEventListener('click', handleSpinClick);
-//   }
-// }
+// Spin adds points but does not subtract point and bet only subtracts points
 
-// function handleBetClick(event) {
-//   let betClicked = event.target.alt;
-//   coins--;
+function handleBetClick(event) {
+  let betClicked = event.target.alt;
+  coins -= 3;
+  console.log(coins);
+  creditAmount();
 
-//   if (gameOver === coins) {
-//     betButton.removeEventListener('click', handleBetClick);
-//   }
-// }
-// spinButton.addEventListener('click', handleSpinClick);
-// betButton.addEventListener('click', handleBetClick);
+  if (gameOver === coins) {
+    betButton.removeEventListener('click', handleBetClick);
+  }
+}
+creditAmount();
+spinButton.addEventListener('click', handleSpinClick);
+betButton.addEventListener('click', handleBetClick);

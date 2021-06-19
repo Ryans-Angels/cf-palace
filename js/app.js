@@ -24,6 +24,7 @@ playerData = getScores ? JSON.parse(getScores) : [];
 
 
 
+
 // Constructor for 
 function Player(name, coins) {
   this.name = name;
@@ -105,9 +106,6 @@ function handleSpinClick(event) {
     localStorage.setItem('playerScores', stringifiedPlayerData);
   }
 }
-
-
-
 
 // Spin adds points but does not subtract point and bet only subtracts points
 

@@ -64,7 +64,72 @@ nav li {
   border: 2px solid green;
 }
 
-.modal {
-  position: absolute;
+/* modal styling 68 -133 */
+.button {
+  background-color: royalblue;
+  color: #fff;
+  padding: 1em 2em;
+  border: 0;
+}
+
+.button:hover {
+  background-color: cadetblue;
+}
+
+#modal {
+  /* uncomment when ready code is ready because modal will hide when this is uncommented */
+  /* display: none; */
+  position: fixed;
   z-index: 1000;
+  left: 27%;
+  top: 12%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.modal-content {
+  background-color: rgb(180, 153, 0);
+  color: white;
+  margin: 20px 60px;
+  padding: 40px;
+  width: 80%;
+  text-align: center;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.17), 0 7px 20px 0 rgba(0,0,0,0.17);
+}
+
+.age-form {
+  font-family: 'Caesar Dressing', cursive;
+  font-size: 2em;
+  line-height: 1.5em; 
+}
+
+#legend {
+  font-family: 'Caesar Dressing', cursive;
+  font-size: 3em;
+  line-height: 1.5em; 
+}
+
+#submit-button {
+  color: #ccc;
+  font-size: 30px;
+  font-family: 'Caesar Dressing', cursive;
+}
+
+#submit-button:hover, #submit-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close-button {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+}
+
+.close-button:hover, .close-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }

@@ -12,7 +12,7 @@ let betButton = document.getElementById('betButton');
 let ReelImagesArray = [];
 let allReels = [];
 
-// Constructor for 
+// Constructor for
 function Player(name, score) {
   this.name = name;
   this.score = score;
@@ -90,6 +90,7 @@ function handleBetClick(event) {
     betButton.removeEventListener('click', handleBetClick);
   }
 }
-creditAmount();
+
+// Event listeners for spin and bet buttons
 spinButton.addEventListener('click', handleSpinClick);
 betButton.addEventListener('click', handleBetClick);

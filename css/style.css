@@ -64,6 +64,7 @@ nav li {
   border: 2px solid green;
 }
 
+/* modal styling 68 -133 */
 .button {
   background-color: royalblue;
   color: #fff;
@@ -75,24 +76,25 @@ nav li {
   background-color: cadetblue;
 }
 
-.modal {
+#modal {
   /* uncomment when ready code is ready because modal will hide when this is uncommented */
   /* display: none; */
   position: fixed;
   z-index: 1000;
-  left: 40%;
+  left: 33%;
   top: 35%;
-  height: 50%;
-  width: 600px;
-  background-color: rgba(0,0,0,0.5);
+  /* height: 1000px;
+  width: 1000px; */
+  /* background-color: rgba(0,0,0,0.1); */
 }
 
 .modal-content {
   background-color: goldenrod;
-  margin: ;
+  /* margin: 10px; */
   padding: 40px;
-  width: 100%;
-  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+  width: 175%;
+  text-align: center;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.17), 0 7px 20px 0 rgba(0,0,0,0.17);
 }
 
 .age-form {
@@ -105,6 +107,17 @@ nav li {
   font-family: 'Caesar Dressing', cursive;
   font-size: 3em;
   line-height: 1.5em; 
+}
+
+#submit-button {
+  color: #ccc;
+  font-size: 30px;
+}
+
+#submit-button:hover, #submit-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .close-button {

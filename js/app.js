@@ -11,7 +11,6 @@ let spinButton = document.getElementById('spinButton');
 // let betButton = document.getElementById('betButton');
 // let formName = document.getElementById('modalSubmit');
 
-
 let ReelImagesArray = [];
 let allReels = [];
 let playerData = [];
@@ -21,11 +20,7 @@ let getScores = localStorage.getItem('playerScores');
 //parses data from local storage
 playerData = getScores ? JSON.parse(getScores) : [];
 
-
-
-
-
-// Constructor for 
+// Constructor for
 function Player(name, coins) {
   this.name = name;
   this.coins = coins;

@@ -81,18 +81,19 @@ nav li {
   /* display: none; */
   position: fixed;
   z-index: 1000;
-  left: 33%;
-  top: 35%;
-  /* height: 1000px;
-  width: 1000px; */
-  /* background-color: rgba(0,0,0,0.1); */
+  left: 27%;
+  top: 12%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
 }
 
 .modal-content {
-  background-color: goldenrod;
-  /* margin: 10px; */
+  background-color: rgb(180, 153, 0);
+  color: white;
+  margin: 20px 60px;
   padding: 40px;
-  width: 175%;
+  width: 80%;
   text-align: center;
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.17), 0 7px 20px 0 rgba(0,0,0,0.17);
 }
@@ -112,6 +113,7 @@ nav li {
 #submit-button {
   color: #ccc;
   font-size: 30px;
+  font-family: 'Caesar Dressing', cursive;
 }
 
 #submit-button:hover, #submit-button:focus {

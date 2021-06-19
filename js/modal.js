@@ -1,7 +1,7 @@
 // 'use strict';
 
 let modal = document.getElementById('modal');
-let modalBtn = document.getElementById('modal-button');
+// let modalBtn = document.getElementById('modal-button');
 let submitBtn = document.getElementById('submit-button');
 let closeBtn = document.getElementsByClassName('close-button')[0];
 

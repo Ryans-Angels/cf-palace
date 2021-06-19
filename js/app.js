@@ -9,14 +9,33 @@ let secondReel = document.getElementById('secondReel');
 let thirdReel = document.getElementById('thirdReel');
 let spinButton = document.getElementById('spinButton');
 let betButton = document.getElementById('betButton');
+let formName = document.getElementById('modalSubmit');
+
+
 let ReelImagesArray = [];
 let allReels = [];
+let playerData = [];
+let sortedScores = playerData;
+
+let getScores = localStorage.getItem('playerScores');
+//parses data from local storage
+playerData = getScores ? JSON.parse(getScores) : [];
+
+
+
 
 // Constructor for 
-function Player(name, score) {
+function Player(name, coins) {
   this.name = name;
-  this.score = score;
+  this.coins = coins;
+  playerData.unshift(this);
 }
+
+new Player('Heather', coins);
+new Player('Phil', coins);
+new Player('Taylor', coins);
+new Player('Ryan', coins);
+
 
 function ReelImages(name, fileExtension = 'jpg') {
   this.src = `img/${name}.${fileExtension}`;
@@ -53,7 +72,7 @@ function creditAmount() {
 }
 
 function winnerWinner() {
-  if(allReels[0] === allReels[1] &&
+  if (allReels[0] === allReels[1] &&
     allReels[0] === allReels[2]) {
     coins += userBet * 3;
   }
@@ -73,10 +92,17 @@ function handleSpinClick(event) {
   winnerWinner();
   if (spinsRemaining === 0) {
     spinButton.removeEventListener('click', handleSpinClick);
+    for (let i = 0; i < playerData.length; i++) {
+      if (playerData[i].name.includes(playerData.name)) {
+        playerData[0].coins = coins;
+        let stringifiedPlayerData = JSON.stringify(playerData);
+        localStorage.setItem('playerScores', stringifiedPlayerData);
+      }
+    }
   }
-  console.log(spinsRemaining);
-  console.log(allReels);
 }
+
+
 
 // Spin adds points but does not subtract point and bet only subtracts points
 

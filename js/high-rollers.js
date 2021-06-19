@@ -1,14 +1,18 @@
 'use strict';
 
-let scoreBoard = document.getElementById('scoreBoard');
-let preFilledPLayers = [{ name: 'lucky', coins: 2 }];
-
+let leaderBoard = document.getElementById('leaderBoard');
+let preFilledPlayers = [{ name: 'lucky', coins: 2 }];
+let topFive = 0;
 
 let getScores = JSON.parse(localStorage.getItem('playerScores'));
 // console.log(getScores);
-let playerData = getScores ? [...preFilledPLayers, ...getScores] : preFilledPLayers;
+let playerData = getScores ? [...preFilledPlayers, ...getScores] : preFilledPlayers;
 
 playerData.sort(function (a, b) {
   return b.coins - a.coins;
 });
-console.log(playerData);
+for (let i = 0; i < 5; i++){
+  let li = document.createElement('li');
+  li.textContent = `Player Name: ${playerData[i].name} Score: ${playerData[i].coins}`;
+  leaderBoard.appendChild(li);
+}

@@ -2,15 +2,13 @@
 
 let spinsRemaining = 4;
 let coins = 12;
-let gameOver = 0;
 let userBet = 3;
 let firstReel = document.getElementById('firstReel');
 let secondReel = document.getElementById('secondReel');
 let thirdReel = document.getElementById('thirdReel');
 let spinButton = document.getElementById('spinButton');
-// let betButton = document.getElementById('betButton');
-// let formName = document.getElementById('modalSubmit');
-
+let modalForm = document.getElementById('modal-form');
+let modal = document.getElementById('modal');
 
 let ReelImagesArray = [];
 let allReels = [];
@@ -21,25 +19,12 @@ let getScores = localStorage.getItem('playerScores');
 //parses data from local storage
 playerData = getScores ? JSON.parse(getScores) : [];
 
-
-
-
-
 // Constructor for 
 function Player(name, coins) {
   this.name = name;
   this.coins = coins;
   playerData.unshift(this);
 }
-if (!getScores) {
-  new Player('Heather', coins);
-  new Player('Phil', coins);
-  new Player('Taylor', coins);
-  new Player('Ryan', coins);
-  new Player('Chris', coins);
-}
-
-
 
 function ReelImages(name, fileExtension = 'jpg') {
   this.src = `img/${name}.${fileExtension}`;
@@ -60,7 +45,6 @@ function selectRandomImage() {
 
 // renders 3 images
 function renderRandomImage() {
-  // console.log(allReels.length);
   while (allReels.length < 3) {
     let selectedImage = selectRandomImage();
     allReels.push(selectedImage);
@@ -68,6 +52,12 @@ function renderRandomImage() {
   firstReel.src = ReelImagesArray[allReels[0]].src;
   secondReel.src = ReelImagesArray[allReels[1]].src;
   thirdReel.src = ReelImagesArray[allReels[2]].src;
+}
+function submitModal(event) {
+  event.preventDefault();
+  modal.style.display = 'none';
+  let submittedName = event.target.name.value;
+  new Player (submittedName, coins);
 }
 
 function creditAmount() {
@@ -96,10 +86,7 @@ function handleSpinClick(event) {
   renderRandomImage();
   creditAmount();
   winnerWinner();
-  if (gameOver === coins) {
-    betButton.removeEventListener('click', handleBetClick);
-  }
-  if (spinsRemaining === 0) {
+  if (spinsRemaining === 0 || coins === 0) {
     spinButton.removeEventListener('click', handleSpinClick);
     playerData[0].coins = coins;
     let stringifiedPlayerData = JSON.stringify(playerData);
@@ -107,14 +94,7 @@ function handleSpinClick(event) {
   }
 }
 
-// Spin adds points but does not subtract point and bet only subtracts points
-
-// function handleBetClick(event) {
-//   let betClicked = event.target.alt;
-//   coins -= 3;
-//   console.log(coins);
-//   creditAmount();
-// }
 creditAmount();
+modalForm.addEventListener('submit', submitModal);
 spinButton.addEventListener('click', handleSpinClick);
-// betButton.addEventListener('click', handleBetClick);
+

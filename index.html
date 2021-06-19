@@ -4,7 +4,6 @@
 <head>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/modal-window.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
   <title>Code Fellows Palace</title>
@@ -12,11 +11,11 @@
 
 <body>
   <header>
-    <!-- <div class="music-bar"><audio controls>
+    <div class="music-bar"><audio controls>
         <source src="horse.ogg" type="audio/ogg">
         <source src="horse.mp3" type="audio/mpeg">
        Your browser does not support the audio tag.
-      </audio></div> -->
+      </audio></div>
     <h1>Code Fellows Palace</h1>
     <nav>
       <ul>
@@ -38,28 +37,23 @@
     <section id="useractions">
       <article id="credits"></article>
       <button id="spinButton">SPIN</button>
-      <!-- <button id="betButton">BET</button> -->
     </section>
   </main>
 
   <!-- modal for name and age verification here -->
-  <!-- <script src="js/modal-window.js"></script>
-    <script src="js/modal-init.js"></script> -->
     <div id="modal" style="width: 1000px; height: 650px;">
-      <!-- <button id="modal-button" class="button">Click Here</button> -->
       <div class="modal-content">
-        <!-- <div class="age-verify"> -->
           <span class="close-button">&times;</span>
           <fieldset class="age-form">
+            <form id ="modal-form">
             <legend id="legend">Et Tu Brute?</legend><br />
-            <label>Name:<br /><input type="text" name="name" required /></label><br /><br />
-            <label for="age">Age Verification:<br /></label><input type="date" name="age" required/><br /><br /><input id="submit-button" type="submit" value="Submit" />
+            <label id="modal-name">Name:<br /><input type="text" name="name" required /></label><br /><br />
+            <label for="age">Age Verification:<br /></label><input type="date" name="age" required /><br /><br /><input id="submit-button" type="submit" value="Submit" />
           </form>
         </fieldset>
       </div>
     </div>
     <script src="js/app.js"></script>
-    <script src="js/modal.js"></script>
     <!-- <footer>Footer Stuff Here</footer> -->
 </body>
 

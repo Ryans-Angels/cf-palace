@@ -1,11 +1,16 @@
 'use strict';
 
 let leaderBoard = document.getElementById('leaderBoard');
-let preFilledPlayers = [{ name: 'lucky', coins: 2 }];
-let topFive = 0;
+let preFilledPlayers = [
+  { name: 'Lucky The Dog', coins: 999 },
+  { name: 'Taylor', coins: 2 },
+  { name: 'Heather', coins: 1 },
+  { name: 'Phil', coins: 0 },
+  { name: 'Ryan', coins: 4 }
+];
 
 let getScores = JSON.parse(localStorage.getItem('playerScores'));
-// console.log(getScores);
+
 let playerData = getScores ? [...preFilledPlayers, ...getScores] : preFilledPlayers;
 
 playerData.sort(function (a, b) {

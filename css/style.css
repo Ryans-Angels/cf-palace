@@ -64,7 +64,57 @@ nav li {
   border: 2px solid green;
 }
 
+.button {
+  background-color: royalblue;
+  color: #fff;
+  padding: 1em 2em;
+  border: 0;
+}
+
+.button:hover {
+  background-color: cadetblue;
+}
+
 .modal {
-  position: absolute;
+  /* uncomment when ready code is ready because modal will hide when this is uncommented */
+  /* display: none; */
+  position: fixed;
   z-index: 1000;
+  left: 40%;
+  top: 35%;
+  height: 50%;
+  width: 600px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: goldenrod;
+  margin: ;
+  padding: 40px;
+  width: 100%;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+}
+
+.age-form {
+  font-family: 'Caesar Dressing', cursive;
+  font-size: 2em;
+  line-height: 1.5em; 
+}
+
+#legend {
+  font-family: 'Caesar Dressing', cursive;
+  font-size: 3em;
+  line-height: 1.5em; 
+}
+
+.close-button {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+}
+
+.close-button:hover, .close-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }

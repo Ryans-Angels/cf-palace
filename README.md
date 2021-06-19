@@ -12,6 +12,12 @@ The Code Fellows Palace
 
 * Ryan Gallaway, Instructor
 * Michael Eclave, TA
+* Darian Carpenter, Badass Graphic Designer
+
+## References
+
+* JavaScript & JQuery Book by Jon Duckett
+* HTML & CSS Book by Jon Duckett
 
 ## Summary of idea
 

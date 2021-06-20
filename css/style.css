@@ -1,9 +1,13 @@
+body {
+  font-family: 'Caesar Dressing', cursive;
+}
+
 header h1 {
   border: 2px solid silver;
   background-color: rgb(180, 153, 0);
   color: white;
   font-family: 'Caesar Dressing', cursive;
-  font-size: 4em; 
+  font-size: 5em; 
   text-align: center;
 }
 
@@ -30,6 +34,8 @@ header nav {
   width: 50%;
   margin: auto;
   margin-top: 25px;
+  font-family: 'Caesar Dressing', cursive;
+  font-size: 1.3em;
 }
 
 nav ul {
@@ -80,7 +86,7 @@ nav li {
 
 #modal {
   /* uncomment display: none; when code is ready because modal will hide when this is uncommented */
-  display: none;
+  /* display: none; */
   position: fixed;
   z-index: 1000;
   left: 27%;
@@ -110,6 +116,11 @@ nav li {
   font-family: 'Caesar Dressing', cursive;
   font-size: 3em;
   line-height: 1.5em; 
+}
+
+#label, input {
+  font-size: 2em;
+  /* line-height: 2em; */
 }
 
 #submit-button {

@@ -19,9 +19,11 @@ main {
   align-items: center;
   width: 100%;
 }
+
 #spinButton {
   border: 3px solid purple;
 }
+
 header nav {
   border: 3px solid red;
   text-align: center;
@@ -64,7 +66,7 @@ nav li {
   border: 2px solid green;
 }
 
-/* modal styling 68 -133 */
+/* modal styling 69 -137 */
 .button {
   background-color: royalblue;
   color: #fff;
@@ -77,8 +79,8 @@ nav li {
 }
 
 #modal {
-  /* uncomment when ready code is ready because modal will hide when this is uncommented */
-  /* display: none; */
+  /* uncomment display: none; when code is ready because modal will hide when this is uncommented */
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 27%;

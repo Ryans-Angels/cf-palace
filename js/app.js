@@ -21,9 +21,6 @@ let coinInsert = new Audio('sounds/coin-insert.wav');
 let win = new Audio('/sounds/win.mp3');
 let jackpot = new Audio('/sounds/jackpot.wav');
 
-
-
-
 // Parses data from local storage
 playerData = getScores ? JSON.parse(getScores) : [];
 
@@ -72,7 +69,6 @@ function submitModal(event) {
   new Player(submittedName, coins);
 }
 
-
 // Displays the amount of credits left
 
 function creditAmount() {
@@ -97,11 +93,9 @@ function winnerWinner() {
   creditAmount();
 }
 
-
 // When submit button on Game Over Modal is clicked display is switched to hidden again. The High Rollers Page is displayed.
-function submitGameOver(event) {
-  event.preventDefault();
-  gameOver.style.display = 'none';
+function submitGameOver() {
+  gameOver.style.display = 'block';
 }
 
 // Does this run 4 times if you win the first time?
@@ -143,4 +137,3 @@ creditAmount();
 modalForm.addEventListener('submit', submitModal);
 spinButton.addEventListener('click', handleSpinClick);
 modalOver.addEventListener('submit', submitGameOver);
-

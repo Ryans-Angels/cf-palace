@@ -110,7 +110,7 @@ main {
 
 #modal {
   /* uncomment display: none; when code is ready because modal will hide when this is uncommented */
-  display: none;
+  /* display: none; */
   position: fixed;
   z-index: 1000;
   left: 27%;
@@ -121,8 +121,7 @@ main {
 }
 
 #game-over {
-  /* uncomment display: none; when code is ready because modal will hide when this is uncommented */
-  /* display: none; */
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 27%;

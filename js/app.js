@@ -10,6 +10,8 @@ let thirdReel = document.getElementById('thirdReel');
 let spinButton = document.getElementById('spinButton');
 let modalForm = document.getElementById('modal-form');
 let modal = document.getElementById('modal');
+let modalOver = document.getElementById('modal-over');
+let gameOver = document.getElementById('game-over');
 let ReelImagesArray = [];
 let allReels = [];
 let playerData = [];
@@ -95,6 +97,14 @@ function winnerWinner() {
   creditAmount();
 }
 
+
+// When submit button on Game Over Modal is clicked display is switched to hidden again. The High Rollers Page is displayed.
+function submitGameOver(event) {
+  event.preventDefault();
+  gameOver.style.display = 'none';
+}
+
+// Does this run 4 times if you win the first time?
 function playCoinAudio () {
   coinInsert.play();
 }
@@ -120,6 +130,7 @@ function handleSpinClick(event) {
   if (spinsRemaining === 0 || coins === 0) {
     spinButton.removeEventListener('click', handleSpinClick);
     playerData[0].coins = coins;
+    submitGameOver();
     let stringifiedPlayerData = JSON.stringify(playerData);
     localStorage.setItem('playerScores', stringifiedPlayerData);
   }
@@ -128,7 +139,8 @@ function handleSpinClick(event) {
 // This displays the starting amount of coins on load
 creditAmount();
 
-// Event listeners for modal and spin button
+// Event listeners for age modal, spin button
 modalForm.addEventListener('submit', submitModal);
 spinButton.addEventListener('click', handleSpinClick);
+modalOver.addEventListener('submit', submitGameOver);
 

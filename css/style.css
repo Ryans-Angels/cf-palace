@@ -108,17 +108,25 @@ main {
   border: 0;
 }
 
-.button:hover {
-  background-color: cadetblue;
+#modal {
+  /* uncomment display: none; when code is ready because modal will hide when this is uncommented */
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 27%;
+  top: 12%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
 }
 
-#modal {
+#game-over {
   /* uncomment display: none; when code is ready because modal will hide when this is uncommented */
   /* display: none; */
   position: fixed;
   z-index: 1000;
   left: 27%;
-  top: 12%;
+  top: 32%;
   height: 100%;
   width: 100%;
   background-color: rgba(0,0,0,0.1);
@@ -140,7 +148,7 @@ main {
   line-height: 1.5em; 
 }
 
-#legend {
+#legend, #over-legend {
   font-family: 'Caesar Dressing', cursive;
   font-size: 3em;
   line-height: 1.5em; 
@@ -148,16 +156,20 @@ main {
 
 #label, input {
   font-size: 2em;
-  /* line-height: 2em; */
 }
 
-#submit-button {
+form > p {
+  font-family: 'Caesar Dressing', cursive;
+  font-size: 2em;
+}
+
+#submit-button, #submit-over-button, button {
   color: #ccc;
   font-size: 30px;
   font-family: 'Caesar Dressing', cursive;
 }
 
-#submit-button:hover, #submit-button:focus {
+#submit-button:hover, #submit-button:focus, #submit-over-button:hover, #submit-over-button:focus, button:hover, button:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;

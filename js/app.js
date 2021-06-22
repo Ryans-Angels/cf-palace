@@ -15,6 +15,13 @@ let allReels = [];
 let playerData = [];
 let sortedScores = playerData;
 let getScores = localStorage.getItem('playerScores');
+let coinInsert = new Audio('sounds/coin-insert.wav');
+let win = new Audio('/sounds/win.mp3');
+let jackpot = new Audio('/sounds/jackpot.wav');
+
+
+
+
 // Parses data from local storage
 playerData = getScores ? JSON.parse(getScores) : [];
 
@@ -64,6 +71,8 @@ function submitModal(event) {
 }
 
 
+// Displays the amount of credits left
+
 function creditAmount() {
   let credits = document.getElementById('credits');
   credits.textContent = `Credits: \n ${coins}`;
@@ -75,22 +84,37 @@ function winnerWinner() {
   if (allReels[0] === allReels[1] &&
     allReels[0] === allReels[2]) {
     coins += userBet * 3;
+    playJackpotWinAudio();
   }
   else if (allReels[0] === allReels[1] ||
     allReels[0] === allReels[2] ||
     allReels[1] === allReels[2]) {
     coins += userBet * 2;
+    playSmallWinAudio();
   }
   creditAmount();
 }
 
-// Does this run 4 times if you win the first time?
+function playCoinAudio () {
+  coinInsert.play();
+}
+
+function playSmallWinAudio () {
+  win.play();
+}
+
+function playJackpotWinAudio () {
+  jackpot.play();
+}
+
+// This will run X number of times based on the spins remaining variable
 function handleSpinClick(event) {
   allReels = [];
   let spinClicked = event.target.alt;
   spinsRemaining--;
   coins -= 3;
   renderRandomImage();
+  playCoinAudio();
   creditAmount();
   winnerWinner();
   if (spinsRemaining === 0 || coins === 0) {
@@ -101,7 +125,7 @@ function handleSpinClick(event) {
   }
 }
 
-// Why do we run this here?
+// This displays the starting amount of coins on load
 creditAmount();
 
 // Event listeners for modal and spin button

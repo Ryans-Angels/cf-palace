@@ -18,6 +18,8 @@ The Code Fellows Palace
 
 * JavaScript & JQuery Book by Jon Duckett
 * HTML & CSS Book by Jon Duckett
+* [Create a Modal with HTML, CSS & JavaScript](https://www.youtube.com/watch?v=6ophW7Ask_0)
+* [Create object from a form](https://www.sitepoint.com/community/t/create-object-from-a-form/313057)
 
 ## Summary of idea
 

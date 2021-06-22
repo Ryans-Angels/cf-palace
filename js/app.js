@@ -70,10 +70,12 @@ function submitModal(event) {
   new Player(submittedName, coins);
 }
 
+
 // Displays the amount of credits left
+
 function creditAmount() {
   let credits = document.getElementById('credits');
-  credits.textContent = coins;
+  credits.textContent = `Credits: \n ${coins}`;
 }
 
 // Logic to determine if reel values are winners. 2 images are a small win and 3 images are a big win. Adds the win amounts to credits. Then uses creditAmount function.

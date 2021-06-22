@@ -16,7 +16,7 @@ let playerData = getScores ? [...preFilledPlayers, ...getScores] : preFilledPlay
 playerData.sort(function (a, b) {
   return b.coins - a.coins;
 });
-for (let i = 0; i < 5; i++){
+for (let i = 0; i < 5; i++) {
   let li = document.createElement('li');
   li.textContent = `Player Name: ${playerData[i].name} Score: ${playerData[i].coins}`;
   leaderBoard.appendChild(li);

@@ -10,11 +10,10 @@
 
 <body>
   <header>
-    <div class="music-bar"><audio controls>
-        <source src="horse.ogg" type="audio/ogg">
-        <source src="horse.mp3" type="audio/mpeg">
-        Your browser does not support the audio tag.
-      </audio></div>
+    <div class="music-bar" id="mainmenu"><audio autoplay controls>
+      <source src="/sounds/mainmenu.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio></div>
     <h1>Code Fellows Palace</h1>
     <nav>
       <ul>
@@ -28,6 +27,26 @@
       <section class="statue"><img src="img/Ryanstatue.jpg"></section>
       <p id="scoreBoard">
       <ul id="leaderBoard">
+        <p id="title">High Rollers</p>
+        <div class="row">
+          <div id="acecardcontainer">
+            <div id="ace" class="cards">
+              <img src="./img/acespades.png" alt="Ace of spades">
+            </div>
+          </div>
+          <div id="king" class="cards">
+            <img src="./img/kingspades.png" alt="King of spades">
+          </div>
+          <div id="queen" class="cards">
+            <img src="./img/queenspades.png" alt="Queen of spades">
+          </div>
+          <div id="jack" class="cards">
+            <img src="./img/jackspades.png" alt="Jack of spades">
+          </div>
+          <div id="ten" class="cards">
+            <img src="./img/10spades.png" alt="Ten of spades">
+          </div>
+        </div>
       </ul>
       </p>
       <section class="statue"><img src="img/Ryanstatue.jpg"></section>

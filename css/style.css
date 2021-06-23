@@ -13,7 +13,6 @@ header h1 {
 }
 
 header nav {
-  /* border: 3px solid red; */
   margin-top: 25px;
   font-family: 'Caesar Dressing', cursive;
   height: 50px;
@@ -24,6 +23,8 @@ header nav {
 nav a {
   text-decoration: none;
   color: white;
+  border: 1px solid #D9CFCA;
+  padding: 5px;
 }
 
 nav ul {
@@ -100,6 +101,64 @@ main {
   padding: 20px;
 }
 
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 450px;
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: rgb(180, 153, 0);;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  transform: rotateY(180deg);
+}
+
+.about-h2 {
+  font-size: 2em;
+}
+
+.about-p {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
 /* modal styling 69 -137 */
 .button {
   background-color: royalblue;
@@ -138,6 +197,7 @@ main {
   padding: 40px;
   width: 80%;
   text-align: center;
+  border-radius: 10px;
   box-shadow: 0 5px 8px 0 rgba(0,0,0,0.17), 0 7px 20px 0 rgba(0,0,0,0.17);
 }
 
@@ -184,4 +244,57 @@ form > p {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards > p {
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  border: 1px solid #D9CFCA;
+}
+
+#title {
+  margin-bottom: 100px;
+  text-align: center;
+  font-family: 'Caesar Dressing', cursive;
+  font-size: 80px;
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+  font-style: italic;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 4px rgb(255, 255, 255),
+      0 0 11px rgb(255, 255, 255),
+      0 0 19px rgb(255, 255, 255),
+      0 0 40px rgb(180, 153, 0),
+      0 0 80px rgb(180, 153, 0),
+      0 0 90px rgb(180, 153, 0),
+      0 0 100px rgb(180, 153, 0),
+      0 0 150px rgb(180, 153, 0);
+  }
+  20%, 24%, 55% {       
+    text-shadow: none;
+  }
+}
+
+img {
+  border-radius: 10px;
 }

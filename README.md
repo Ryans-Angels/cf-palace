@@ -12,12 +12,15 @@ The Code Fellows Palace
 
 * Ryan Gallaway, Instructor
 * Michael Eclave, TA
-* Darian Carpenter, Badass Graphic Designer
 
 ## References
 
 * JavaScript & JQuery Book by Jon Duckett
 * HTML & CSS Book by Jon Duckett
+* [Create a Modal with HTML, CSS & JavaScript](https://www.youtube.com/watch?v=6ophW7Ask_0)
+* [Create object from a form](https://www.sitepoint.com/community/t/create-object-from-a-form/313057)
+* [10 Best Blank Playing Card Printable Template for Word](https://www.printablee.com/post_blank-playing-card-printable-template-for-word_364105/)
+* [Code Snippets for HTML, CSS and JavaScript](https://www.w3schools.com/howto/default.asp)
 
 ## Summary of idea
 
@@ -37,3 +40,4 @@ What is the minimum required for you to present on your demo day? To get three r
 * [Trello Board](https://trello.com/b/yxDFr4aX/kanban-board)
 * [Wireframe](img/Wireframe.jpg)
 * [Domain Model](img/DomainModel.jpg)
+* [Flip Card](https://www.w3schools.com/howto/howto_css_flip_card.asp)  

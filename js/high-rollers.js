@@ -1,6 +1,13 @@
 'use strict';
 
 let leaderBoard = document.getElementById('leaderBoard');
+let ace = document.getElementById('ace');
+let king = document.getElementById('king');
+let queen = document.getElementById('queen');
+let jack = document.getElementById('jack');
+let ten = document.getElementById('ten');
+
+
 let preFilledPlayers = [
   { name: 'Lucky The Dog', coins: 999 },
   { name: 'Taylor', coins: 2 },
@@ -18,37 +25,37 @@ playerData.sort(function (a, b) {
 });
 for (let i = 0; i < 5; i++) {
   if (i === 0){
-    let card1 = document.getElementById('acecardcontainer');
-    let ace = document.createElement('p');
-    ace.textContent = `Player Name: ${playerData[i].name} Score: ${playerData[i].coins}`;
-    card1.appendChild(ace);
+    let p = document.createElement('p');
+    p.textContent = `${playerData[i].name} Score: ${playerData[i].coins}`;
+    p.style.position = 'absolute';
+    ace.appendChild(p);
   }
 
   else if (i === 1){
-    document.getElementById('king');
-    let king = document.createElement('p');
-    king.textContent = `Player Name: ${playerData[i].name} Score: ${playerData[i].coins}`;
-    leaderBoard.appendChild(king);
+    let p = document.createElement('p');
+    p.textContent = `${playerData[i].name} Score: ${playerData[i].coins}`;
+    p.style.position = 'absolute';
+    king.appendChild(p);
   }
 
   else if (i === 2){
-    document.getElementById('queen');
-    let queen = document.createElement('p');
-    queen.textContent = `Player Name: ${playerData[i].name} Score: ${playerData[i].coins}`;
-    leaderBoard.appendChild(queen);
+    let p = document.createElement('p');
+    p.textContent = `${playerData[i].name} Score: ${playerData[i].coins}`;
+    p.style.position = 'absolute';
+    queen.appendChild(p);
   }
 
   else if (i === 3){
-    document.getElementById('jack');
-    let jack = document.createElement('p');
-    jack.textContent = `Player Name: ${playerData[i].name} Score: ${playerData[i].coins}`;
-    leaderBoard.appendChild(jack);
+    let p = document.createElement('p');
+    p.textContent = `${playerData[i].name} Score: ${playerData[i].coins}`;
+    p.style.position = 'absolute';
+    jack.appendChild(p);
   }
 
   else if (i === 4) {
-    document.getElementById('ten');
-    let ten = document.createElement('p');
-    ten.textContent = `Player Name: ${playerData[i].name} Score: ${playerData[i].coins}`;
-    leaderBoard.appendChild(ten);
+    let p = document.createElement('p');
+    p.textContent = `${playerData[i].name} Score: ${playerData[i].coins}`;
+    p.style.position = 'absolute';
+    ten.appendChild(p);
   }
 }

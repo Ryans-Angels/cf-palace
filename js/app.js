@@ -93,8 +93,8 @@ function winnerWinner() {
   creditAmount();
 }
 
-// When submit button on Game Over Modal is clicked display is switched to hidden again. The High Rollers Page is displayed.
-function submitGameOver() {
+// When spinsRemaining === 0 or coins === 0 Game Over Modal display is switched to block to allow access to High Rollers page.
+function displayGameOver() {
   gameOver.style.display = 'block';
 }
 
@@ -124,7 +124,7 @@ function handleSpinClick(event) {
   if (spinsRemaining === 0 || coins === 0) {
     spinButton.removeEventListener('click', handleSpinClick);
     playerData[0].coins = coins;
-    submitGameOver();
+    displayGameOver();
     let stringifiedPlayerData = JSON.stringify(playerData);
     localStorage.setItem('playerScores', stringifiedPlayerData);
   }
@@ -136,4 +136,4 @@ creditAmount();
 // Event listeners for age modal, spin button
 modalForm.addEventListener('submit', submitModal);
 spinButton.addEventListener('click', handleSpinClick);
-modalOver.addEventListener('submit', submitGameOver);
+modalOver.addEventListener('submit', displayGameOver);

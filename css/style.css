@@ -146,7 +146,7 @@ main {
 .flip-card-back {
   background-color: rgb(180, 153, 0);;
   color: white;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   transform: rotateY(180deg);
 }
 
@@ -254,6 +254,7 @@ form > p {
 
 footer {
   color: white;
+  text-align: center;
   border: 1px solid #D9CFCA;
 }
 

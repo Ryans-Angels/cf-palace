@@ -24,6 +24,8 @@ header nav {
 nav a {
   text-decoration: none;
   color: white;
+  border: 1px solid #D9CFCA;
+  padding: 5px;
 }
 
 nav ul {
@@ -184,4 +186,43 @@ form > p {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.cards {
+  float:left;
+  width: 19%;
+  padding: 5px;
+}
+
+
+#title {
+  margin-bottom: 100px;
+  text-align: center;
+  font-family: 'Caesar Dressing', cursive;
+  font-size: 80px;
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+  font-style: italic;
+
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 4px rgb(255, 255, 255),
+      0 0 11px rgb(255, 255, 255),
+      0 0 19px rgb(255, 255, 255),
+      0 0 40px rgb(180, 153, 0),
+      0 0 80px rgb(180, 153, 0),
+      0 0 90px rgb(180, 153, 0),
+      0 0 100px rgb(180, 153, 0),
+      0 0 150px rgb(180, 153, 0);
+  }
+  20%, 24%, 55% {       
+    text-shadow: none;
+  }
+}
+
+img {
+  border-radius: 10px;
 }

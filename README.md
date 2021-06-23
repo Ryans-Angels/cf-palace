@@ -40,3 +40,4 @@ What is the minimum required for you to present on your demo day? To get three r
 * [Trello Board](https://trello.com/b/yxDFr4aX/kanban-board)
 * [Wireframe](img/Wireframe.jpg)
 * [Domain Model](img/DomainModel.jpg)
+* [Flip Card](https://www.w3schools.com/howto/howto_css_flip_card.asp)  

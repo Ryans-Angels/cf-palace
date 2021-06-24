@@ -1,28 +1,29 @@
 'use strict';
 
-let leaderBoard = document.getElementById('leaderBoard');
+// Global Variable
 let ace = document.getElementById('ace');
 let king = document.getElementById('king');
 let queen = document.getElementById('queen');
 let jack = document.getElementById('jack');
 let ten = document.getElementById('ten');
 
-
+// Prefilled leaderboard
 let preFilledPlayers = [
-  { name: 'Lucky The Dog', coins: 999 },
+  { name: 'Lucky', coins: 99999},
   { name: 'Taylor', coins: 2 },
   { name: 'Heather', coins: 1 },
   { name: 'Phil', coins: 0 },
   { name: 'Ryan', coins: 4 }
 ];
 
+// Grabs local storage for scores and sorts them from highest to lowest
 let getScores = JSON.parse(localStorage.getItem('playerScores'));
-
 let playerData = getScores ? [...preFilledPlayers, ...getScores] : preFilledPlayers;
-
 playerData.sort(function (a, b) {
   return b.coins - a.coins;
 });
+
+// Places each score on a card in order from highest to lowest
 for (let i = 0; i < 5; i++) {
   if (i === 0){
     let p = document.createElement('p');

@@ -1,9 +1,9 @@
 'use strict';
 
 // Setting variables and entries into DOM
-let spinsRemaining = 4;
-let coins = 12;
-let userBet = 3;
+let spinsRemaining = 10;
+let coins = 10000;
+let userBet = 100;
 let firstReel = document.getElementById('firstReel');
 let secondReel = document.getElementById('secondReel');
 let thirdReel = document.getElementById('thirdReel');
@@ -98,7 +98,7 @@ function displayGameOver() {
   gameOver.style.display = 'block';
 }
 
-// Does this run 4 times if you win the first time?
+// Audio for wins and betting
 function playCoinAudio () {
   coinInsert.play();
 }
@@ -116,7 +116,7 @@ function handleSpinClick(event) {
   allReels = [];
   let spinClicked = event.target.alt;
   spinsRemaining--;
-  coins -= 3;
+  coins -= 100;
   renderRandomImage();
   playCoinAudio();
   creditAmount();

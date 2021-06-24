@@ -17,9 +17,9 @@ let allReels = [];
 let playerData = [];
 let sortedScores = playerData;
 let getScores = localStorage.getItem('playerScores');
-let coinInsert = new Audio('sounds/coin-insert.wav');
-let win = new Audio('/sounds/win.mp3');
-let jackpot = new Audio('/sounds/jackpot.wav');
+let coinInsert = new Audio('./sounds/coin-insert.wav');
+let win = new Audio('./sounds/win.mp3');
+let jackpot = new Audio('./sounds/jackpot.wav');
 
 // Parses data from local storage
 playerData = getScores ? JSON.parse(getScores) : [];

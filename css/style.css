@@ -269,7 +269,6 @@ form > p {
 footer {
   color: white;
   text-align: center;
-  border: 1px solid #D9CFCA;
   animation: flicker 2s infinite alternate;
 }
 

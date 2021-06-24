@@ -3,7 +3,7 @@
 // Setting variables and entries into DOM
 let spinsRemaining = 10;
 let coins = 10000;
-let userBet = 3;
+let userBet = 100;
 let firstReel = document.getElementById('firstReel');
 let secondReel = document.getElementById('secondReel');
 let thirdReel = document.getElementById('thirdReel');
